@@ -1,5 +1,6 @@
 #include "binary_trees.h"
 #include "110-binary_tree_is_bst.c"
+#include "9-binary_tree_height.c"
 
 /**
  * binary_tree_is_avl - determines whether a tree is an AVL tree
