@@ -3,7 +3,7 @@
 #include "9-binary_tree_height.c"
 #include "10-binary_tree_depth.c"
 
-static int s_height;
+static size_t s_height;
 static int s_is_perfect;
 
 /**
@@ -23,7 +23,6 @@ void increase_perfect(const binary_tree_t *tree)
 		if (binary_tree_depth(tree) != s_height)
 		{
 			s_is_perfect = 0;
-			printf("n: %d, h: %d, d: %d\n", tree->n, s_height, binary_tree_depth(tree));
 		}
 }
 
