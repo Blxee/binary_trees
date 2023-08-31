@@ -10,8 +10,8 @@ static size_t s_size;
  */
 void increase_size(const binary_tree_t *tree)
 {
-	(void)tree;
-	s_size++;
+	if (tree->left || tree->right)
+		s_size++;
 }
 
 /**
