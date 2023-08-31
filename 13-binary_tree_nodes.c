@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-#include "binary_tree_utils.c"
+#include "binary_tree_utils/binary_tree_true_inorder.c"
 
 static size_t s_size;
 
