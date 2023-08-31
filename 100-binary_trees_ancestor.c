@@ -12,23 +12,23 @@ binary_tree_t *binary_trees_ancestor(
 		const binary_tree_t *first,
 		const binary_tree_t *second)
 {
-	binary_tree_t *first_parents[128] = {NULL};
+	const binary_tree_t *first_parents[128] = {NULL};
 	size_t i = 0;
 
 	if (first == NULL || second == NULL)
 		return (NULL);
 
-	while (first->parent)
+	while (first)
 	{
-		first_parents[i++] = first->parent;
+		first_parents[i++] = first;
 		first = first->parent;
 	}
 
-	while (second->parent)
+	while (second)
 	{
 		for (i = 0; first_parents[i]; i++)
-			if (first_parents[i] == second->parent)
-				return (second->parent);
+			if (first_parents[i] == second)
+				return ((binary_tree_t *)second);
 		second = second->parent;
 	}
 
