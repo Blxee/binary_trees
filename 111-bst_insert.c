@@ -28,7 +28,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 		if (traverser->n == value)
 		{
 			free(node);
-			return (NULL);
+			return (traverser);
 		}
 		if (value < traverser->n)
 		{
