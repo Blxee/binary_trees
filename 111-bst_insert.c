@@ -17,7 +17,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	traverser = *tree, node = malloc(sizeof(*node));
 	if (node == NULL)
 		return (NULL);
-	node->n = value, node->left = NULL, node->right = NULL;
+	node->parent = *tree, node->n = value, node->left = NULL, node->right = NULL;
 	if (*tree == NULL)
 	{
 		*tree = node;
@@ -28,7 +28,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 		if (traverser->n == value)
 		{
 			free(node);
-			return (traverser);
+			return (NULL);
 		}
 		if (value < traverser->n)
 		{
