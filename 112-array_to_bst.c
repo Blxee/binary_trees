@@ -20,4 +20,6 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	while (i < size)
 		bst_insert(&root, array[i++]);
+
+	return (root);
 }
